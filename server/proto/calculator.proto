@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package calculator;
+
+service Calculator {
+  rpc Multiply(Request) returns (Response) {}
+}
+
+message Request {
+  repeated int32 input = 1;
+}
+
+message Response {
+  int32 result = 1;
+}
